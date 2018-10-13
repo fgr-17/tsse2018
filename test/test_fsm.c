@@ -7,5 +7,6 @@ void tearDown(void) {
 }
 
 void test_fsmInit(void) {
-   TEST_FAIL_MESSAGE("Primer paso: test que falla");
+   fsmInit();
+   TEST_ASSERT_EQUAL_HEX32(ESTADO_INICIAL, estadoFsm);
 }
