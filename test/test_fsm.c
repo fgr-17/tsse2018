@@ -1,4 +1,5 @@
 #include "unity.h"
+#include "fsm.h"
 
 void setUp(void) {
 }
