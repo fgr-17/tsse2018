@@ -21,4 +21,13 @@ void fsmInit(void) {
 }
 
 
+/**
+ * @fn void fsm(void);
+ *
+ * @brief maquina de estados
+ */
+
+void fsm (void) {
+    return;
+}
 
