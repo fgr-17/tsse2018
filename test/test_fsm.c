@@ -11,3 +11,13 @@ void test_fsmInit(void) {
    fsmInit();
    TEST_ASSERT_EQUAL_HEX32(ESTADO_INICIAL, estadoFsm);
 }
+
+void test_fsmCrear (void) {
+
+    fsmInit();
+    
+    fsm();
+    
+    TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
+
+}
