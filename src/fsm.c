@@ -15,6 +15,9 @@ uint32_t estadoFsm;
 
 void fsmInit(void) {
 
+    estadoFsm = ESTADO_INICIAL;
+    return;
+
 }
 
 
