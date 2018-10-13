@@ -1,5 +1,7 @@
 /** @brief defino estado inicial */
-#define ESTADO_INICIAL  0x100
+#define ESTADO_INICIAL  ESTADO_ESPERO_SINC
+
+#define ESTADO_ESPERO_SINC  0x100
 
 /** @brief prototipo de la funcion de inicializacion de la fsm */
 void fsmInit(void);
