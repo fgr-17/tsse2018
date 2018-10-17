@@ -57,6 +57,15 @@ void fsm (void) {
         }
         break;
 
+    case ESTADO_ETAPA_ONLINE:
+
+        if(comando == 'E') {
+            estadoFsm = ESTADO_ESPERO_SINC;
+            enviarRespuesta("P@@@@@");
+        }
+
+        break;
+
     }
     return;
 }
