@@ -63,6 +63,10 @@ void fsm (void) {
             estadoFsm = ESTADO_ESPERO_SINC;
             enviarRespuesta("P@@@@@");
         }
+        else if (comando == 'P') {
+            estadoFsm = ESTADO_ESPERO_SINC;
+            enviarRespuesta("P@@@@@");
+        }
 
         break;
 
