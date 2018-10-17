@@ -37,6 +37,9 @@ void fsm (void) {
         estadoFsm = ESTADO_ESPERO_START;
         enviarRespuesta("U0000");
     }
+    else if(comando == 'S') {
+        estadoFsm = ESTADO_ETAPA_ONLINE;    
+    }
 
     return;
 }
