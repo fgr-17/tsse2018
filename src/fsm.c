@@ -47,7 +47,12 @@ void fsm (void) {
         break;
 
     case ESTADO_ESPERO_START:
-        if(comando == 'S') {
+
+        if(comando == '@'){
+            estadoFsm = ESTADO_ESPERO_START;
+            enviarRespuesta("U0000");
+        }
+        else if(comando == 'S') {
             estadoFsm = ESTADO_ETAPA_ONLINE;    
         }
         break;
