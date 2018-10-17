@@ -98,7 +98,7 @@ void test_fsmTercerEstado (void) {
     recibirComando_ExpectAndReturn('E');    
     enviarRespuesta_Expect("P@@@@@");
     fsm();
-
+    TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);  
 
 
 }
