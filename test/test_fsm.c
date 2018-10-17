@@ -30,5 +30,6 @@ void test_fsmPrimerEstado(void) {
     recibirComando_ExpectAndReturn('@');
     fsm();
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_START, estadoFsm);
+    enviarRespuesta_Expect("U0000");
 }
 
