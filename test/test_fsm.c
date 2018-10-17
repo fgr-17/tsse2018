@@ -57,6 +57,13 @@ void test_fsmSegundoEstado(void) {
     fsm();
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_START, estadoFsm);
 
+
+    recibirComando_ExpectAndReturn('S');    
+    fsm();
+    TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_ONLINE, estadoFsm);
+
+
+
 }
 
 
