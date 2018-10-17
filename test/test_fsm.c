@@ -13,7 +13,7 @@ void test_fsmInit(void) {
    fsmInit();
    TEST_ASSERT_EQUAL_HEX32(ESTADO_INICIAL, estadoFsm);
 }
-
+/*
 void test_fsmCrear (void) {
 
     fsmInit();
@@ -22,7 +22,7 @@ void test_fsmCrear (void) {
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
 
 }
-
+*/
 void test_fsmPrimerEstado(void) {
     // espero recibir primer comando de arroba para cambiar de estado
     recibirComando_ExpectAndReturn('@');

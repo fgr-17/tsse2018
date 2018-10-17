@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <fsm.h>
 
+#include "eventos.h"
 /** @brief prototipo de la funcion de inicializacion de la fsm */
 void fsmInit(void);
 
@@ -28,8 +29,9 @@ void fsmInit(void) {
  */
 
 void fsm (void) {
+    int8_t comando;
 
-
+    comando = recibirComando();
 
     return;
 }
