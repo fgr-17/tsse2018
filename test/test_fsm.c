@@ -79,6 +79,31 @@ void test_fsmSegundoEstado(void) {
 
 }
 
+void test_fsmTercerEstado (void) {
+
+    // inicializo la fsm
+    fsmInit();
+
+    // mando al segundo estado
+    recibirComando_ExpectAndReturn('@');
+    enviarRespuesta_Expect("U0000");
+    fsm();
+
+
+    // mando al 3er estado
+    recibirComando_ExpectAndReturn('S');    
+    fsm();
+
+    // pruebo transicion por E
+    recibirComando_ExpectAndReturn('E');    
+    enviarRespuesta_Expect("P@@@@@");
+    fsm();
+
+
+
+}
+
+
 
 
 
