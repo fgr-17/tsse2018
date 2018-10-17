@@ -33,8 +33,10 @@ void fsm (void) {
 
     comando = recibirComando();
 
-    if(comando == '@')
+    if(comando == '@'){
         estadoFsm = ESTADO_ESPERO_START;
+        enviarRespuesta("U0000");
+    }
 
     return;
 }
