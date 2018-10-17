@@ -28,14 +28,37 @@ void test_fsmPrimerEstado(void) {
     fsmInit();
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
 
+    // Testeo que no se vaya a otro estado
     recibirComando_ExpectAndReturn('x');
     fsm();
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
 
+    // Testeo primer transición
     recibirComando_ExpectAndReturn('@');
     enviarRespuesta_Expect("U0000");
     fsm();
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_START, estadoFsm);
 
 }
+
+void test_fsmSegundoEstado(void) {
+
+    // inicializo la fsm
+    fsmInit();
+
+    // mando al segundo estado
+    recibirComando_ExpectAndReturn('@');
+    enviarRespuesta_Expect("U0000");
+    fsm();
+
+    
+
+
+}
+
+
+
+
+
+
 
