@@ -26,7 +26,12 @@ void test_fsmCrear (void) {
 void test_fsmPrimerEstado(void) {
     // espero recibir primer comando de arroba para cambiar de estado
     fsmInit();
-    TEST_ASSERT_EQUAL_HEX32(ESTADO_INICIAL, estadoFsm);
+    TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
+
+    recibirComando_ExpectAndReturn('x');
+    fsm();
+    TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
+
     recibirComando_ExpectAndReturn('@');
     enviarRespuesta_Expect("U0000");
     fsm();
