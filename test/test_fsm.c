@@ -29,7 +29,7 @@ void test_fsmPrimerEstado(void) {
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
 
     // Testeo que no se vaya a otro estado
-    recibirComando_ExpectAndReturn('x');
+    recibirComando_ExpectAndReturn('S');
     fsm();
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
 
