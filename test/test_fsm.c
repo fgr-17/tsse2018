@@ -52,7 +52,10 @@ void test_fsmSegundoEstado(void) {
     fsm();
 
     
-
+    recibirComando_ExpectAndReturn('@');    
+    enviarRespuesta_Expect("U0000");
+    fsm();
+    TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_START, estadoFsm);
 
 }
 
