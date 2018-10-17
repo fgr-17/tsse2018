@@ -1,6 +1,8 @@
 #include "unity.h"
 #include "fsm.h"
 
+#include "mock_eventos.h"
+
 void setUp(void) {
 }
 
@@ -21,3 +23,9 @@ void test_fsmCrear (void) {
     TEST_ASSERT_EQUAL_HEX32(ESTADO_ESPERO_SINC, estadoFsm);
 
 }
+
+void test_fsmPrimerEstado(void) {
+
+    fsm();
+}
+
