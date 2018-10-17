@@ -33,14 +33,26 @@ void fsm (void) {
 
     comando = recibirComando();
 
-    if(comando == '@'){
-        estadoFsm = ESTADO_ESPERO_START;
-        enviarRespuesta("U0000");
-    }
-    else if(comando == 'S') {
-        estadoFsm = ESTADO_ETAPA_ONLINE;    
-    }
+    switch(estadoFsm) {
 
+    case ESTADO_ESPERO_SINC:    
+
+        if(comando == '@'){
+            estadoFsm = ESTADO_ESPERO_START;
+            enviarRespuesta("U0000");
+        }
+        else
+            estadoFsm = ESTADO_ESPERO_SINC;
+
+        break;
+
+    case ESTADO_ESPERO_START:
+        if(comando == 'S') {
+            estadoFsm = ESTADO_ETAPA_ONLINE;    
+        }
+        break;
+
+    }
     return;
 }
 
